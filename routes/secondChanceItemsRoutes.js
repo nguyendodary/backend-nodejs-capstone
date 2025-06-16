@@ -38,4 +38,14 @@ router.post("/api/secondchance/items", upload.single("file"), async (req, res) =
   }
 });
 
+router.delete("/api/secondchance/items/:id", async (req, res) => {
+  try {
+    const db = await connectToDatabase();
+    const result = await db.collection("items").deleteOne({ _id: new ObjectId(req.params.id) });
+    if (result.deletedCount === 0) return res.status(404).json({ error: "Item not found" });
+    res.json({ message: "Item deleted" });
+  } catch (error) {
+    res.status(500).json({ error: "Server error" });
+  }
+});
 module.exports = router;
