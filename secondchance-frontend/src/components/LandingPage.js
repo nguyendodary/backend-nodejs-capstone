@@ -1,5 +1,6 @@
 import React from "react";
 import "../styles.css";
+
 function LandingPage() {
   return (
     <div className="page-container">
@@ -8,4 +9,5 @@ function LandingPage() {
     </div>
   );
 }
+
 export default LandingPage;

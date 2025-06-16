@@ -1,15 +1,20 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../styles.css";
+
 function Navbar() {
-  const username = "testuser"; // Replace with auth logic if implemented
   return (
-    <nav className="navbar">
-      <Link to="/">SecondChance</Link>
+    <div className="navbar">
+      <span>SecondChance</span>
       <div>
-        {username ? <span>Logged in as: {username}</span> : <Link to="/register">Register</Link>}
+        <Link to="/">Home</Link>
+        <Link to="/items">Items</Link>
+        <Link to="/search">Search</Link>
+        <Link to="/register">Register</Link>
+        <span>Logged in as: testuser</span>
       </div>
-    </nav>
+    </div>
   );
 }
+
 export default Navbar;
