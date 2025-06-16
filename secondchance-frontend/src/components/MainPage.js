@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import "./styles.css";
-
+import "../styles.css";
 function MainPage() {
   const [items, setItems] = useState([]);
   useEffect(() => {

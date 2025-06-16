@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./styles.css";
-
+import "../styles.css";
 function Navbar() {
   const username = "testuser"; // Replace with auth logic if implemented
   return (

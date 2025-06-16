@@ -1,6 +1,5 @@
 import React from "react";
-import "./styles.css";
-
+import "../styles.css";
 function Register() {
   return (
     <div className="page-container">
