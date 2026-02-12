@@ -1,21 +1,15 @@
 {
-  "name": "secondchance-backend",
+  "name": "secondchance",
   "version": "1.0.0",
-  "main": "app.js",
+  "description": "SecondChance - Second-Hand Marketplace",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js"
+    "dev": "docker-compose up -d",
+    "stop": "docker-compose down",
+    "logs": "docker-compose logs -f",
+    "seed": "docker-compose exec backend node src/scripts/seed.js"
   },
-  "keywords": [],
+  "keywords": ["marketplace", "second-hand"],
   "author": "",
-  "license": "ISC",
-  "description": "",
-  "dependencies": {
-    "cors": "^2.8.5",
-    "dotenv": "^16.5.0",
-    "express": "^5.1.0",
-    "mongodb": "^6.17.0",
-    "multer": "^2.0.1",
-    "natural": "^8.1.0"
-  }
+  "license": "ISC"
 }
